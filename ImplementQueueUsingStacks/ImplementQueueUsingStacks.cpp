@@ -74,11 +74,6 @@ public:
 
 	int front()
 	{
-		return m_Stack.top();
-	}
-
-	int back()
-	{
 		Stack tempStack(m_Stack.size());
 		while (!m_Stack.isEmpty())
 		{
@@ -92,6 +87,11 @@ public:
 			tempStack.pop();
 		}
 		return element;
+	}
+
+	int back()
+	{
+		return m_Stack.top();
 	}
 
 	void push(int element)
